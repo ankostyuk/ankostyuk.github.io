@@ -1,0 +1,13 @@
+.ankostyuk-page {
+    margin-top: 20px;
+}
+
+.ankostyuk-page .page-title {
+    margin-top: 0;
+}
+
+.ankostyuk-page .disabled-link {
+   pointer-events: none;
+   cursor: default;
+   color: #777;
+}
