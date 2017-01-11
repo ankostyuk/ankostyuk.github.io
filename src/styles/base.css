@@ -1,0 +1,14 @@
+html[lang=ru] .lang-link.ru,
+html[lang=en] .lang-link.en {
+   pointer-events: none;
+   cursor: default;
+   color: #777;
+}
+
+.ankostyuk-page {
+    margin-top: 20px;
+}
+
+.ankostyuk-page .page-title {
+    margin-top: 0;
+}
