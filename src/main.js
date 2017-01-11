@@ -43,8 +43,6 @@
         }
 
         function loadContent() {
-            console.info('*** loadContent...');
-
             var lang            = localConfig['lang'],
                 requests        = [];
 
@@ -70,9 +68,7 @@
             });
 
             $.when.apply($, requests).always(function(){
-                console.warn('*** always, templates:', templates);
                 $.each(templates, function(k, t){
-                    console.info('*', k, t);
                     $('[' + k + ']').each(function(){
                         $(this).html(t.html);
                     });
