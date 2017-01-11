@@ -7,12 +7,91 @@ html[lang=en] .lang-link.en {
 
 #ankostyuk-page {
     margin-top: 20px;
-    /*visibility: hidden;*/
+    visibility: hidden;
 }
-/*#ankostyuk-page.ready {
+#ankostyuk-page.ready {
     visibility: visible;
-}*/
+}
 
 #ankostyuk-page [page-header] {
     margin-top: 0;
+}
+
+
+/* Bootstrap print fix */
+@media print {
+  /**,
+  *:before,
+  *:after {
+    color: #000 !important;
+    text-shadow: none !important;
+    background: transparent !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+  }*/
+  a,
+  a:visited {
+    /*text-decoration: underline;*/
+    text-decoration: none !important;
+    color: #286090 !important;
+  }
+  a[href]:after {
+    /*content: " (" attr(href) ")";*/
+    content: "" !important;
+  }
+  abbr[title]:after {
+    /*content: " (" attr(title) ")";*/
+    content: "" !important;
+  }
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "" !important;
+  }
+  /*pre,
+  blockquote {
+    border: 1px solid #999;
+
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+  .navbar {
+    display: none;
+  }
+  .btn > .caret,
+  .dropup > .btn > .caret {
+    border-top-color: #000 !important;
+  }
+  .label {
+    border: 1px solid #000;
+  }
+  .table {
+    border-collapse: collapse !important;
+  }
+  .table td,
+  .table th {
+    background-color: #fff !important;
+  }
+  .table-bordered th,
+  .table-bordered td {
+    border: 1px solid #ddd !important;
+  }*/
 }
