@@ -5,10 +5,14 @@ html[lang=en] .lang-link.en {
    color: #777;
 }
 
-.ankostyuk-page {
+#ankostyuk-page {
     margin-top: 20px;
+    /*visibility: hidden;*/
 }
+/*#ankostyuk-page.ready {
+    visibility: visible;
+}*/
 
-.ankostyuk-page .page-title {
+#ankostyuk-page [page-header] {
     margin-top: 0;
 }

@@ -3,7 +3,8 @@
     'use strict';
 
     var CONFIG = {
-        'app.name': 'ankostyuk.github.io',
+        'app.name': 'ankostyuk-page',
+        'content.url': 'src/views/content/',
         'default.lang': 'ru'
     };
 
@@ -12,7 +13,9 @@
         var url             = purl(),
             locationSearch  = url.param(),
             $html           = $('html'),
-            localConfig     = {};
+            $app            = $('#' + CONFIG['app.name']),
+            localConfig     = {},
+            templates       = {};
 
         //
         function checkLocalConfig() {
@@ -40,7 +43,42 @@
         }
 
         function loadContent() {
-            // console.info('*** loadContent', this);
+            console.info('*** loadContent...');
+
+            var lang            = localConfig['lang'],
+                requests        = [];
+
+            var contentViews    = [
+                'base.html',
+                lang + '/main.html'
+            ];
+
+            $.each(contentViews, function(i, v){
+                var r = $.get(CONFIG['content.url'] + v, function(data){
+                    $(data).each(function(){
+                        var $t = $(this),
+                            id = $t.attr('id');
+
+                        if (id) {
+                            templates[id] = {
+                                html: $t.html()
+                            };
+                        }
+                    });
+                });
+                requests.push(r);
+            });
+
+            $.when.apply($, requests).always(function(){
+                console.warn('*** always, templates:', templates);
+                $.each(templates, function(k, t){
+                    console.info('*', k, t);
+                    $('[' + k + ']').each(function(){
+                        $(this).html(t.html);
+                    });
+                });
+                $app.addClass('ready');
+            });
         }
 
         //
