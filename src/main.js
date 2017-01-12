@@ -8,12 +8,14 @@
         'default.lang': 'ru'
     };
 
-    function App() {
+    function App(options) {
+        options = options || {};
+
         //
         var url             = purl(),
             locationSearch  = url.param(),
             $html           = $('html'),
-            $app            = $('#' + CONFIG['app.name']),
+            $app            = options.container,
             localConfig     = {},
             templates       = {};
 
@@ -73,12 +75,12 @@
                         $(this).html(t.html);
                     });
                 });
-                $app.addClass('ready');
+                $app.addClass(CONFIG['app.name'] + '_ready');
             });
         }
 
         function initTags() {
-            $app.find('.tags-bar [ap-tag-toggle]').click(function(){
+            $app.find('.ap-tags-bar [ap-tag-toggle]').click(function(){
                 var $tagToggle  = $(this),
                     tag         = $tagToggle.attr('ap-tag-toggle'),
                     on          = $tagToggle.hasClass('btn-primary'),
@@ -107,7 +109,9 @@
 
     // startup
     $(function() {
-        var app = new App();
+        var app = new App({
+            container: $('body')
+        });
         app.init();
     });
 })(document, window);

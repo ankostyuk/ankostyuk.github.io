@@ -1,23 +1,23 @@
-html[lang="ru"] .lang-link.ru,
-html[lang="en"] .lang-link.en {
+html[lang="ru"] .ap-lang-switcher__link_ru,
+html[lang="en"] .ap-lang-switcher__link_en {
    pointer-events: none;
    cursor: default;
    color: #777;
 }
 
-#ankostyuk-page {
+.ankostyuk-page {
     margin-top: 20px;
     visibility: hidden;
 }
-#ankostyuk-page.ready {
+.ankostyuk-page_ready {
     visibility: visible;
 }
 
-#ankostyuk-page [page-header] {
+.ap-page-header {
     margin-top: 0;
 }
 
-#ankostyuk-page .intro {
+.ap-intro {
     padding-top: 20px;
 }
 
