@@ -77,12 +77,30 @@
             });
         }
 
+        function initTags() {
+            $app.find('.tags-bar [ap-tag-toggle]').click(function(){
+                var $tagToggle  = $(this),
+                    tag         = $tagToggle.attr('ap-tag-toggle'),
+                    on          = $tagToggle.hasClass('btn-primary'),
+                    $tagContent = $app.find('[ap-tag="' + tag + '"]');
+
+                if (on) {
+                    $tagToggle.removeClass('btn-primary').addClass('btn-default');
+                    $tagContent.hide();
+                } else {
+                    $tagToggle.removeClass('btn-default').addClass('btn-primary');
+                    $tagContent.show();
+                }
+            });
+        }
+
         //
         return {
             init: function() {
                 checkLocalConfig();
                 checkLang();
                 loadContent();
+                initTags();
             }
         };
     }

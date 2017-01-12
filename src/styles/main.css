@@ -1,5 +1,5 @@
-html[lang=ru] .lang-link.ru,
-html[lang=en] .lang-link.en {
+html[lang="ru"] .lang-link.ru,
+html[lang="en"] .lang-link.en {
    pointer-events: none;
    cursor: default;
    color: #777;
@@ -17,6 +17,9 @@ html[lang=en] .lang-link.en {
     margin-top: 0;
 }
 
+#ankostyuk-page .intro {
+    padding-top: 20px;
+}
 
 /* Bootstrap print fix */
 @media print {
