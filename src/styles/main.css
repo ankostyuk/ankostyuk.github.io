@@ -1,3 +1,8 @@
+h2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 html[lang="ru"] .ap-lang-switcher__link_ru,
 html[lang="en"] .ap-lang-switcher__link_en {
    pointer-events: none;
@@ -7,6 +12,7 @@ html[lang="en"] .ap-lang-switcher__link_en {
 
 .ankostyuk-page {
     margin-top: 20px;
+    padding-bottom: 20px;
     visibility: hidden;
 }
 .ankostyuk-page_ready {
@@ -15,6 +21,23 @@ html[lang="en"] .ap-lang-switcher__link_en {
 
 .ap-page-header {
     margin-top: 0;
+}
+
+.ap-tags-bar {
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.ap-tags-bar:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    right: 0;
+    height: 1px;
+    background-color: #ccc;
 }
 
 .ap-anchor-block {
@@ -40,7 +63,19 @@ html[lang="en"] .ap-lang-switcher__link_en {
 }
 
 .ap-intro {
-    padding-top: 20px;
+    padding-top: 10px;
+}
+
+.ap-block-header {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.ap-block-header__title {
+    margin-top: -4px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.25;
 }
 
 /* Bootstrap print fix */
