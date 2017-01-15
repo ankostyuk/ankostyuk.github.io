@@ -17,6 +17,28 @@ html[lang="en"] .ap-lang-switcher__link_en {
     margin-top: 0;
 }
 
+.ap-anchor-block {
+    position: relative;
+}
+.ap-anchor-block__anchor {
+    position: absolute;
+    display: block;
+    height: 100%;
+    margin-left: -1em;
+    padding-right: 0.5em;
+    text-decoration: none !important;
+    opacity: 0;
+}
+.ap-anchor-block:hover .ap-anchor-block__anchor {
+    opacity: 0.5;
+}
+.ap-anchor-block__anchor:hover {
+    opacity: 1 !important;
+}
+.ap-anchor-block__anchor::after {
+    content: "#"
+}
+
 .ap-intro {
     padding-top: 20px;
 }

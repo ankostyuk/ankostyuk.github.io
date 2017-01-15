@@ -44,7 +44,7 @@
             storeLocalConfig();
         }
 
-        function loadContent() {
+        function loadContent(done) {
             var lang            = localConfig['lang'],
                 requests        = [];
 
@@ -75,7 +75,7 @@
                         $(this).html(t.html);
                     });
                 });
-                $app.addClass(CONFIG['app.name'] + '_ready');
+                done();
             });
         }
 
@@ -96,13 +96,27 @@
             });
         }
 
+        function initAnchors() {
+            $app.find('.ap-anchor-block').each(function(){
+                var $anchorBlock = $(this);
+
+                $anchorBlock.prepend($('<a/>', {
+                    'class': 'ap-anchor-block__anchor',
+                    'href': '#' + $anchorBlock.attr('id')
+                }));
+            });
+        }
+
         //
         return {
             init: function() {
                 checkLocalConfig();
                 checkLang();
-                loadContent();
-                initTags();
+                loadContent(function(){
+                    $app.addClass(CONFIG['app.name'] + '_ready');
+                    initTags();
+                    initAnchors();
+                });
             }
         };
     }
