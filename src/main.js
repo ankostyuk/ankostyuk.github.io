@@ -80,18 +80,34 @@
         }
 
         function initTags() {
+            var $tagToggles = $app.find('.ap-tags-bar [ap-tag-toggle]'),
+                activeClass = 'ap-tags-bar__toggle_active';
+
             $app.find('.ap-tags-bar [ap-tag-toggle]').click(function(){
-                var $tagToggle  = $(this),
-                    tag         = $tagToggle.attr('ap-tag-toggle'),
-                    on          = $tagToggle.hasClass('btn-primary'),
-                    $tagContent = $app.find('[ap-tag="' + tag + '"]');
+                var $tagToggle      = $(this),
+                    on              = $tagToggle.hasClass(activeClass),
+                    showSelector    = '',
+                    one             = false;
 
                 if (on) {
-                    $tagToggle.removeClass('btn-primary').addClass('btn-default');
-                    $tagContent.hide();
+                    $tagToggle.removeClass(activeClass);
                 } else {
-                    $tagToggle.removeClass('btn-default').addClass('btn-primary');
-                    $tagContent.show();
+                    $tagToggle.addClass(activeClass);
+                }
+
+                $tagToggles.each(function(){
+                    var $t = $(this);
+
+                    if ($t.hasClass(activeClass)) {
+                        showSelector += (one ? ',' : '') + '[ap-tag~="' + $t.attr('ap-tag-toggle') + '"]';
+                        one = true;
+                    }
+                });
+
+                $app.find(showSelector ? '[ap-tag]:not(' + showSelector + ')' : '[ap-tag]').hide();
+
+                if (showSelector) {
+                    $app.find(showSelector).show();
                 }
             });
         }

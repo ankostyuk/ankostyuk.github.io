@@ -39,6 +39,12 @@ html[lang="en"] .ap-lang-switcher__link_en {
     height: 1px;
     background-color: #ccc;
 }
+.ap-tags-bar__toggle {
+    color: #333 !important;
+}
+.ap-tags-bar__toggle_active {
+    color: #337ab7 !important;
+}
 
 .ap-anchor-block {
     position: relative;
