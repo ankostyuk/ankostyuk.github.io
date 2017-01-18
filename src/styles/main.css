@@ -76,12 +76,18 @@ html[lang="en"] .ap-lang-switcher__link_en {
     margin-top: 30px;
     margin-bottom: 10px;
 }
+.ap-block-header_plain {
+    margin-top: 0;
+}
 .ap-block-header__title {
     margin-top: -4px;
     margin-bottom: 10px;
     font-size: 18px;
     font-weight: 500;
     line-height: 1.25;
+}
+.ap-block-header__text {
+    margin-bottom: 10px;
 }
 
 /* Bootstrap print fix */
