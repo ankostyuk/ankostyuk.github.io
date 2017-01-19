@@ -70,11 +70,24 @@
             });
 
             $.when.apply($, requests).always(function(){
-                $.each(templates, function(k, t){
-                    $('[' + k + ']').each(function(){
-                        $(this).html(t.html);
+                var more;
+
+                do {
+                    more = false;
+
+                    $.each(templates, function(k, t){
+                        $('[' + k + ']').each(function(){
+                            var $el     = $(this),
+                                html    = $.trim($el.html());
+
+                            if (!html) {
+                                $el.html($.trim(t.html));
+                                more = true;
+                            }
+                        });
                     });
-                });
+                } while (more);
+
                 done();
             });
         }
