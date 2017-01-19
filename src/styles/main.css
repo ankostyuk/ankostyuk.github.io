@@ -90,6 +90,51 @@ html[lang="en"] .ap-lang-switcher__link_en {
     margin-bottom: 10px;
 }
 
+.ap-project-description {
+    overflow: visible;
+}
+.ap-project-description .media-right {
+    padding-left: 20px;
+}
+.ap-project-preview {
+    display: block;
+    position: relative;
+    width: 64px;
+    height: 64px;
+    background-color: #fff;
+    text-decoration: none !important;
+}
+/*.ap-project-preview:before {
+    display: none;
+    content: "";
+    z-index: -1;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    background-color: #23527c;
+}
+.ap-project-preview:hover:before {
+    display: block;
+}*/
+.ap-project-preview__image {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 64px;
+    height: 64px;
+    border: 0 none;
+}
+.ap-project-preview__image:hover {
+    left: -2px;
+    top: -2px;
+    width: 68px;
+    height: 68px;
+}
+
+
 /* Bootstrap print fix */
 @media print {
   /**,
@@ -166,4 +211,9 @@ html[lang="en"] .ap-lang-switcher__link_en {
   .table-bordered td {
     border: 1px solid #ddd !important;
   }*/
+
+  .media-right,
+  .media-left {
+      display: none;
+  }
 }
