@@ -3,13 +3,6 @@ h2 {
     margin-bottom: 30px;
 }
 
-html[lang="ru"] .ap-lang-switcher__link_ru,
-html[lang="en"] .ap-lang-switcher__link_en {
-   pointer-events: none;
-   cursor: default;
-   color: #777;
-}
-
 .ankostyuk-page {
     margin-top: 20px;
     padding-bottom: 20px;
@@ -20,7 +13,26 @@ html[lang="en"] .ap-lang-switcher__link_en {
 }
 
 .ap-page-header {
+    position: relative;
+}
+.ap-page-header__title {
     margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.ap-tools {
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+.ap-lang-switcher {
+    margin-bottom: 30px;
+}
+html[lang="ru"] .ap-lang-switcher__link_ru,
+html[lang="en"] .ap-lang-switcher__link_en {
+   pointer-events: none;
+   cursor: default;
+   color: #777;
 }
 
 .ap-tags-bar {

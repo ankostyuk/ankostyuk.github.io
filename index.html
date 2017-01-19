@@ -16,18 +16,25 @@
 
     <body class="ankostyuk-page">
         <div class="container">
-            <div class="row">
-                <h1 class="ap-page-header col-xs-9" ap-page-header></h1>
-                <div class="ap-lang-switcher col-xs-3 text-right hidden-print">
-                    <p><a class="ap-lang-switcher__link ap-lang-switcher__link_en" href="?lang=en">English</a></p>
-                    <p><a class="ap-lang-switcher__link ap-lang-switcher__link_ru" href="?lang=ru">Русский</a></p>
+            <div class="row ap-page-header">
+                <h1 class="ap-page-header__title col-xs-9" ap-page-header-title></h1>
+                <div class="ap-tools text-right hidden-print">
+                    <div class="ap-lang-switcher text-right hidden-print">
+                        <p><a class="ap-lang-switcher__link ap-lang-switcher__link_en" href="?lang=en">English</a></p>
+                        <p><a class="ap-lang-switcher__link ap-lang-switcher__link_ru" href="?lang=ru">Русский</a></p>
+                    </div>
+                    <p><button class="btn btn-default" ap-tools-print>Печать...</button></p>
                 </div>
             </div>
 
-            <address id="contacts" class="ap-anchor-block">
-                <div ap-contacts-location></div>
-                <div ap-contacts></div>
-            </address>
+            <div class="row">
+                <div class="col-xs-6">
+                    <address id="contacts" class="ap-anchor-block">
+                        <div ap-contacts-location></div>
+                        <div ap-contacts></div>
+                    </address>
+                </div>
+            </div>
 
             <!-- <div class="ap-tags-bar hidden-print">
                 <div class="btn-group" role="group" aria-label="">

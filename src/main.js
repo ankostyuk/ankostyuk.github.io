@@ -123,15 +123,23 @@
             });
         }
 
+        function initTools() {
+            $app.find('[ap-tools-print]').click(function(){
+                _window.print();
+            });
+        }
+
         //
         return {
             init: function() {
                 checkLocalConfig();
                 checkLang();
                 loadContent(function(){
-                    $app.addClass(CONFIG['app.name'] + '_ready');
                     initTags();
                     initAnchors();
+                    initTools();
+
+                    $app.addClass(CONFIG['app.name'] + '_ready');
                 });
             }
         };
