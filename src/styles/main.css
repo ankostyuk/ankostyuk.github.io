@@ -246,3 +246,10 @@ html[lang="en"] .ap-lang-switcher__link_en {
     border: 1px solid #ddd !important;
   }*/
 }
+
+/* print */
+@media print {
+    .ankostyuk-page {
+        margin: 0;
+    }
+}
