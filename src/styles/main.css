@@ -111,12 +111,16 @@ html[lang="en"] .ap-lang-switcher__link_en {
 .ap-project-preview {
     display: block;
     position: relative;
-    width: 64px;
-    height: 64px;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 5px;
     outline: 0 !important;
     color: #fff !important;
     background-color: #fff;
     text-decoration: none !important;
+}
+.ap-project-preview:hover {
+    z-index: 10;
 }
 .ap-project-preview__image {
     display: block;
@@ -241,9 +245,4 @@ html[lang="en"] .ap-lang-switcher__link_en {
   .table-bordered td {
     border: 1px solid #ddd !important;
   }*/
-
-  .media-right,
-  .media-left {
-      display: none;
-  }
 }
