@@ -3,6 +3,21 @@ h2 {
     margin-bottom: 30px;
 }
 
+ul.ap-list-item-spacing {
+    margin: 0;
+}
+ul.ap-list-item-spacing > li {
+    margin-bottom: 10px;
+}
+
+.ap-mark-as-item:before {
+    /*content: "• ";*/
+    /*content: "· ";*/
+    /*font-weight: bold;*/
+    content: "✳ ";
+    font-size: 85%;
+}
+
 .ankostyuk-page {
     margin-top: 20px;
     padding-bottom: 20px;
@@ -28,6 +43,9 @@ h2 {
 }
 .ap-lang-switcher {
     margin-bottom: 30px;
+}
+.ap-lang-switcher > li {
+    margin-bottom: 10px;
 }
 html[lang="ru"] .ap-lang-switcher__link_ru,
 html[lang="en"] .ap-lang-switcher__link_en {
@@ -169,7 +187,6 @@ html[lang="en"] .ap-lang-switcher__link_en {
     background-color: #fff;
 }
 
-
 /* Bootstrap print fix */
 @media print {
   /**,
@@ -185,7 +202,7 @@ html[lang="en"] .ap-lang-switcher__link_en {
   a:visited {
     /*text-decoration: underline;*/
     text-decoration: none !important;
-    color: #286090 !important;
+    color: #23527c !important;
   }
   a[href]:after {
     /*content: " (" attr(href) ")";*/

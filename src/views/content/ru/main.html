@@ -6,6 +6,10 @@
     Печать...
 </script>
 
+<script id="ap-tools-download-pdf" type="text/template">
+    <a href="files/ankostyuk-ru.pdf">Открыть PDF</a>
+</script>
+
 <script id="ap-contacts-location" type="text/template">
     <p>Москва, Россия</p>
 </script>
@@ -24,29 +28,80 @@
     Технические навыки
 </script>
 <script id="ap-technical-skills" type="text/template">
-    TODO
-    <!-- <p>Общие: UI, UX, SOA, OOP, TDD, Refactoring, Анализ бизнес требований, Проектирование систем</p>
-    <p>Языки: JavaScript, Java, SQL, XML, Python</p>
-    <p>Клиент: AngularJS, RequireJS, jQuery, Raphaël, Backbone.js, HTML, CSS, LESS, Bootstrap</p>
-    <p>Веб: HTTP, REST, SOAP</p>
-    <p>Фреймворки: Node.js, Spring, iBatis, Grunt</p>
-    <p>Хранилища данных: PostgreSQL, MongoDB</p>
-    <p>Системы контроля версий: Git, Mercurial, SVN</p>
-    <p>Багтрекинги: Redmine, Jira</p>
-    TODO: Переработать -->
+    <ul class="ap-list-item-spacing list-unstyled">
+        <li>Разработка: UI, UX, SOA, OOP, TDD, Refactoring, Анализ требований, Проектирование систем, Управление проектами и разработкой.</li>
+        <li>Языки: JavaScript, Java, Python.</li>
+        <li>Фронтенд: AngularJS, jQuery, Lodash, Raphaël, RequireJS, HTML, CSS, LESS, Bootstrap, Adobe Photoshop.</li>
+        <li>Бэкенд: Spring Framework, Apache Tomcat, Node.js, Express, PhantomJS, Grunt.</li>
+        <li>Веб: HTTP, REST, SOAP.</li>
+        <li>Хранилища данных: PostgreSQL, MongoDB, Neo4j, Apache Solr.</li>
+        <li>Тестирование: Unit testing, Mock, Mocha, Chai, JMeter.</li>
+        <li>Контроль версий: Git, Mercurial.</li>
+        <li>Багтрекинги: Redmine, GitHub, Jira.</li>
+        <li>ОС: Mac OS X, Linux, bash.</li>
+    </ul>
 </script>
 
 <script id="ap-experience-title" type="text/template">
     Опыт работы
 </script>
+
+<script id="ap-experience-nkb-link-genitive" type="text/template">
+    <a href="http://www.creditnet.ru/?lang=ru">Национального кредитного бюро</a>
+</script>
+<script id="ap-experience-project-nkb-product-link-rsearch-selfemployed" type="text/template">
+    <a href="http://www.creditnet.ru/hyper/?q=315774600404327&lang=ru">сведений об индивидуальных предпринимателях</a>
+</script>
+<script id="ap-experience-project-nkb-product-link-rsearch" type="text/template">
+    <a href="http://www.creditnet.ru/hyper/?q=78486593&lang=ru">Унифицированный поиск</a>
+</script>
+<script id="ap-experience-project-nkb-product-link-relations" type="text/template">
+    <a href="http://www.creditnet.ru/nkbrelation/report/?report.sharekey=tgsdesazrsnikjep&lang=ru">Анализ аффилированных лиц и конечных бенефициаров</a>
+</script>
+<script id="ap-experience-item-7-project-nkb-preview" type="text/template">
+    <a class="ap-project-preview" href="images/nkb/rsearch-selfemployed-ru.png"><span class="media-object ap-project-preview__image"><img class="media-object ap-project-preview__image__img" alt="" src="images/nkb/rsearch-preview.png"></span></a>
+    <a class="ap-project-preview" href="images/nkb/relations-history-ru.png"><span class="media-object ap-project-preview__image"><img class="media-object ap-project-preview__image__img" alt="" src="images/nkb/relations-preview.png"></span></a>
+    <a class="ap-project-preview" href="images/nkb/connections-ru.png"><span class="media-object ap-project-preview__image"><img class="media-object ap-project-preview__image__img" alt="" src="images/nkb/connections-preview.png"></span></a>
+</script>
+<script id="ap-experience-item-6-project-nkb-preview" type="text/template">
+    <a class="ap-project-preview" href="images/nkb/rsearch-ru.png"><span class="media-object ap-project-preview__image"><img class="media-object ap-project-preview__image__img" alt="" src="images/nkb/rsearch-preview.png"></span></a>
+    <a class="ap-project-preview" href="images/nkb/relations-ru.png"><span class="media-object ap-project-preview__image"><img class="media-object ap-project-preview__image__img" alt="" src="images/nkb/relations-preview.png"></span></a>
+    <a class="ap-project-preview" href="images/nkb/comments.png"><span class="media-object ap-project-preview__image"><img class="media-object ap-project-preview__image__img" alt="" src="images/nkb/comments-preview.png"></span></a>
+</script>
+
 <script id="ap-experience" type="text/template">
 
     <div class="ap-experience-item">
-        <div class="ap-block-header">
-            <div class="ap-block-header__title">Индивидуальный предприниматель</div>
-            <div class="ap-block-header__text">Ноябрь 2015 – настоящее время</div>
+        <div class="row ap-block-header">
+            <div class="col-sm-4">
+                <div class="ap-block-header__title">Ведущий разработчик</div>
+                <div class="ap-block-header__text">Ноябрь 2015 – настоящее время</div>
+            </div>
+            <div class="col-sm-8">
+                <div class="ap-block-header__title">
+                    Индивидуальный предприниматель
+                </div>
+            </div>
         </div>
-        TODO
+        <p>
+            Сопровождаю проекты, ранее реализованные <a href="http://null-pointer.ru">[nullpointer]</a> для <span ap-experience-nkb-link-genitive></span>.
+            Проектирую и разрабатываю программное обеспечение. Анализирую бизнес требования и разрабатываю спецификации.
+        </p>
+        <div class="media ap-project-description">
+            <div class="media-body">
+                <p>Спроектировал поддержку <span ap-experience-project-nkb-product-link-rsearch-selfemployed></span> и реализовал фронтенд.</p>
+                <p>
+                    Разработал алгоритм определения исторических связей на нечетких данных для поддержки
+                    истории взаимосвязей компаний и физических лиц в продуктах <span ap-experience-project-nkb-product-link-rsearch></span> и <span ap-experience-project-nkb-product-link-relations></span>,
+                    реализовал фронтенд.
+                </p>
+                <p>Спроектировал сервис "Поиск признаков конфликта интересов – Пакетная проверка взаимосвязей между списками компаний и физических лиц", <a href="https://github.com/ankostyuk/demo-connections-ui">реализовал</a> фронтенд.</p>
+                <p><a href="https://github.com/ankostyuk/demo-relations">Спроектировал и разработал</a> публичный API взаимосвязей компаний и физических лиц информационной системы <span ap-experience-nkb-link-genitive></span>.</p>
+                <p>Технологии: <span ap-experience-item-7-project-nkb-technologies></span>.</p>
+            </div>
+            <div class="media-right" ap-experience-item-7-project-nkb-preview></div>
+        </div>
+        <p>Руководил разработкой и релизами продуктов <span ap-experience-nkb-link-genitive></span>, проводил технические собеседования.</p>
     </div>
 
     <div class="ap-experience-item">
@@ -64,8 +119,95 @@
                 </div>
             </div>
         </div>
-        <p>Основал компанию, специализирующуюся на разработке программного обеспечения на заказ.</p>
-        TODO
+        <p>
+            Основал компанию, специализирующуюся на разработке программного обеспечения на заказ.
+            Выстраивал бизнес отношения с заказчиками, занимался финансовым планированием и управлял проектами.
+            Проектировал и разрабатывал программное обеспечение. Анализировал бизнес требования и разрабатывал спецификации. Формировал команду разработки, проводил технические собеседования. Руководил командой разработки в составе 2–7 человек.
+        </p>
+        <p>Нашей командой были реализованы проекты...</p>
+        <div class="media ap-project-description">
+            <p class="ap-mark-as-item">
+                Новые продукты системы "Предоставления информации о юридических лицах" <span ap-experience-nkb-link-genitive></span>:
+            </p>
+            <ul class="ap-list-item-spacing">
+                <li>
+                    <span ap-experience-project-nkb-product-link-rsearch></span>.
+                    Поиск компаний и физических лиц по наименованию, ИНН, ОГРН, адресу, телефону или ФИО.
+                    В результате поиска предоставляется детальная информация о компаниях и физических лицах, а также данные о взаимосвязях компаний и физических лиц.
+                </li>
+                <li>
+                    <span ap-experience-project-nkb-product-link-relations></span>.
+                    Информация о взаимосвязях между компаниями и физическими лицами, являющимися их владельцами или руководителями, или косвенно связанными как родственники, участники закупок или как имеющие отношение к другим связанным компаниям.
+                    Схематический, многоуровневый анализ структуры собственности и корпоративного управления, автоматический поиск взаимосвязей и построение графических схем взаимосвязей, экспорт схем в различные форматы и публикация в виде ссылок.
+                </li>
+                <li>
+                    Система комментирования.
+                    Комментарии к аналитическим отчетам по компаниям и результатов поиска, прикрепление файлов и управление видимостью комментариев для других пользователей.
+                    Виджет комментариев может быть размещен на любой странице сайта.
+                </li>
+            </ul>
+            <p>Данные продукты привлекли новых клиентов и увеличили объем продаж <span ap-experience-nkb-link-genitive></span> на 30%.</p>
+            <div class="media-body">
+                <p>Я продвинул некоторые свои идеи и предложения по функциональности и развитию продуктов, руководил разработкой и релизами продуктов.</p>
+                <p><a href="https://github.com/ankostyuk/demo-extraneous">Разработал</a> сервис получения информации о компаниях и физических лицах с интернет-ресурсов.</p>
+                <p><a href="https://github.com/ankostyuk/demo-rsearch">Спроектировал и разработал</a> пользовательский интерфейс и фронтенд продукта <span ap-experience-project-nkb-product-link-rsearch></span>.</p>
+                <p><a href="https://github.com/ankostyuk/demo-relation-ui">Спроектировал и разработал</a> пользовательский интерфейс и фронтенд продукта <span ap-experience-project-nkb-product-link-relations></span> и <a href="https://github.com/ankostyuk/demo-relations">разработал</a> экспорт схем взаимосвязей в форматы PNG, PDF, DOCX.</p>
+                <p><a href="https://github.com/ankostyuk/demo-creditnet-comments">Спроектировал и разработал</a> виджет комментариев.</p>
+                <p>Сделал <a href="files/nkb/relations-presentation.pdf">презентацию продукта Анализ аффилированных лиц и конечных бенефициаров</a> для <a href="https://nkb.timepad.ru/event/82749/">конференции Национального кредитного бюро</a>.</p>
+                <p>Технологии: <span ap-experience-item-6-project-nkb-technologies></span>.</p>
+            </div>
+            <div class="media-right" ap-experience-item-6-project-nkb-preview></div>
+        </div>
+        <div class="media ap-project-description">
+            <div class="media-body">
+                <p class="ap-mark-as-item">
+                    Платежные инструменты для <a href="https://engine.paymentgate.ru">Рунет Бизнес Системы</a>: Интеграция процессинговых, платежных шлюзов и систем онлайн-оплаты, Приложение мобильного банкинга с использованием сервиса USSD, REST протокол мобильного банк-клиента, Приложение в социальной сети для пополнения баланса мобильного телефона.
+                </p>
+                <p>Технологии: <span ap-experience-item-6-project-rbs-technologies></span>.</p>
+            </div>
+        </div>
+        <div class="media ap-project-description">
+            <div class="media-body">
+                <p class="ap-mark-as-item">
+                    Конвергентная биллинговая система для облачного сервиса видеонаблюдения компании <a href="https://ru.ivideon.com/">Ivideon</a>.
+                </p>
+                <p>Я спроектировал и разработал API.</p>
+                <p>Технологии: <span ap-experience-item-6-project-ivideon-technologies></span>.</p>
+            </div>
+        </div>
+        <div class="media ap-project-description">
+            <div class="media-body">
+                <p class="ap-mark-as-item">
+                    Интернет-салон мебели <a href="http://2x2mebel.ru/about/">2×2 Мебель</a>.
+                </p>
+                <p>Я разработал фронтенд.</p>
+                <p>Технологии: <span ap-experience-item-6-project-2x2mebel-technologies></span>.</p>
+            </div>
+        </div>
+        <div class="media ap-project-description">
+            <div class="media-body">
+                <p class="ap-mark-as-item">
+                    <a href="https://github.com/newpointer/i18n-bin/blob/master/src/build.md">Cпроектировал и разработал i18n-пакеты</a> для локализации приложений.
+                    Данные пакеты используются для локализации фронтенда и бэкенда программных продуктов.
+                </p>
+                <p>Технологии: <span ap-experience-item-6-project-nullpointer-i18n-technologies></span>.</p>
+            </div>
+        </div>
+        <div class="media ap-project-description">
+            <div class="media-body">
+                <p class="ap-mark-as-item">
+                    <a href="https://github.com/newpointer/web-app">Cпроектировал и разработал сборщик веб-приложений</a>.
+                </p>
+                <p>Технологии: <span ap-experience-item-6-project-nullpointer-webapp-technologies></span>.</p>
+            </div>
+        </div>
+        <!-- <div class="media ap-project-description">
+            <div class="media-body">
+                <p class="ap-mark-as-item">
+                    Сделал <a href="files/nkb/relations-presentation.pdf">презентацию продукта Анализ аффилированных лиц и конечных бенефициаров</a> для конференции <a href="http://www.creditnet.ru/">Национального кредитного бюро</a>.
+                </p>
+            </div>
+        </div> -->
     </div>
 
     <div class="ap-experience-item">
@@ -79,15 +221,15 @@
                     BPC Banking Technologies
                 </div>
                 <div class="ap-block-header__text">
-                    Группа компаний. Москва, Россия. <a href="http://www.bpcbt.com">bpcbt.com</a>
+                    Группа компаний. Москва, Россия. <a href="http://www.bpcbt.ru/">bpcbt.ru</a>
                 </div>
             </div>
         </div>
         <div class="media ap-project-description">
             <div class="media-body">
-                <p>Проинтегрировал систему продажи билетов авиакомпании <a href="http://www.aeroflot.ru/ru-en">Аэрофлот</a> с платежным шлюзом <a href="http://www.sberbank.ru/en/individualclients">Сбербанка</a>.</p>
-                <p>Спроектировал и разработал "Систему определения и контроля мошеннических операций в электронной коммерции". Система внедрялась в <a href="http://www.sberbank.ru/en/individualclients">Сбербанк</a> и <a href="http://alfabank.com/">Альфабанк</a>.</p>
-                <p>Технологии: <span ap-experience-item-4-project-bpc-technologies></span>.</p>
+                <p>Проинтегрировал систему продажи билетов авиакомпании <a href="http://www.aeroflot.ru/ru-ru">Аэрофлот</a> с платежным шлюзом <a href="http://www.sberbank.ru/ru">Сбербанка</a>.</p>
+                <p>Спроектировал и разработал "Систему определения и контроля мошеннических операций в электронной коммерции". Система внедрялась в <a href="http://www.sberbank.ru/ru">Сбербанк</a> и <a href="https://alfabank.ru/">Альфабанк</a>.</p>
+                <p>Технологии: <span ap-experience-item-5-project-bpc-technologies></span>.</p>
             </div>
         </div>
     </div>
@@ -131,10 +273,10 @@
                 </div>
             </div>
         </div>
-        <p>Проектировал и разрабатывал программное обеспечение. Анализировал бизнес требования и разрабатывал спецификации. Руководил группой разработки в составе 2–5 человек.</p>
+        <p>Проектировал и разрабатывал программное обеспечение. Анализировал бизнес требования и разрабатывал спецификации. Формировал команду разработки, проводил технические собеседования. Руководил командой разработки в составе 2–5 человек.</p>
         <div class="media ap-project-description">
             <div class="media-body">
-                <p>Спроектировал и разработал интерфейсы в проектах:</p>
+                <p class="ap-mark-as-item">Спроектировал и разработал пользовательские интерфейсы и фронтенд в проектах:</p>
                 <ul>
                     <li>Веб-интерфейс системы мониторинга комплекса добычи сырой нефти</li>
                     <li>Веб-ориентированная система электронного документооборота</li>
@@ -147,14 +289,14 @@
         </div>
         <div class="media ap-project-description">
             <div class="media-body">
-                <p>Спроектировал и разработал библиотеку кодирования-декодирования двухмерного штрихкода PDF417, OCR-библиотеку распознавания машиночитаемой зоны документов для "Государственной системы изготовления, оформления и контроля паспортно-визовых документов нового поколения".</p>
+                <p class="ap-mark-as-item">Спроектировал и разработал библиотеку кодирования-декодирования двухмерного штрихкода PDF417, OCR-библиотеку распознавания машиночитаемой зоны документов для "Государственной системы изготовления, оформления и контроля паспортно-визовых документов нового поколения".</p>
                 <p>Технологии: <span ap-experience-item-3-project-int-pdf417-ocr-technologies-p1></span>, Обработка изображений, Искусственные нейронные сети, Коды Рида — Соломона.</p>
             </div>
             <div class="media-right" ap-experience-item-3-project-int-pdf417-ocr-preview></div>
         </div>
         <div class="media ap-project-description">
             <div class="media-body">
-                <p>Спроектировал и разработал систему построения отчетов для "Государственной системы изготовления, оформления и контроля паспортно-визовых документов нового поколения".</p>
+                <p class="ap-mark-as-item">Спроектировал и разработал систему построения отчетов для "Государственной системы изготовления, оформления и контроля паспортно-визовых документов нового поколения".</p>
                 <p>Технологии: <span ap-experience-item-3-project-int-mrtd-technologies></span>.</p>
             </div>
             <div class="media-right" ap-experience-item-3-project-int-mrtd-preview></div>
@@ -172,12 +314,13 @@
                     Научно-исследовательский сектор Московского государственного индустриального университета
                 </div>
                 <div class="ap-block-header__text">
-                    Высшее учебное заведение. Москва, Россия. <a href="http://mospolytech.ru/?eng">mospolytech.ru</a>
+                    Высшее учебное заведение. Москва, Россия. <a href="http://mospolytech.ru">mospolytech.ru</a>
                 </div>
             </div>
         </div>
         <p>Занимался научными изысканиями, написанием научно-исследовательских статей и отчетов.</p>
         <p>Разработал аппаратно-программный комплекс для автоматизированного измерения и оценки параметров шероховатости на основе трехмерного анализа поверхности.</p>
+        <p>Получил патент №2004612670 "Управляющая программа профилометром R2DHWCL".</p>
         <p>Технологии: <span ap-experience-item-2-technologies-p1></span>, Электроника, Механотроника, Обработка сигналов, Фурье и Вейвлет преобразования.</p>
     </div>
 
