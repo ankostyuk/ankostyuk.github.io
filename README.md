@@ -1,3 +1,3 @@
 # My Resume
 
-https://ankostyuk.github.io/
+https://ankostyuk.github.io
