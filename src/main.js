@@ -5,7 +5,7 @@
     var CONFIG = {
         'app.name': 'ankostyuk-page',
         'content.url': 'src/views/content/',
-        'default.lang': 'ru'
+        'default.lang': 'en'
     };
 
     function App(options) {
