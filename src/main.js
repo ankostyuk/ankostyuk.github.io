@@ -5,7 +5,11 @@
     var CONFIG = {
         'app.name': 'ankostyuk-page',
         'content.url': 'src/views/content/',
-        'default.lang': 'en'
+        'langs': {
+            'ru': {},
+            'en': {}
+        },
+        'default.lang': 'ru'
     };
 
     function App(options) {
@@ -39,8 +43,10 @@
         }
 
         function checkLang() {
-            localConfig['lang'] = locationSearch['lang'] || localConfig['lang'] || CONFIG['default.lang'];
-            $html.attr('lang', localConfig['lang']);
+            var lang = locationSearch['lang'] || localConfig['lang'];
+            lang = CONFIG['langs'][lang] ? lang : CONFIG['default.lang'];
+            localConfig['lang'] = lang;
+            $html.attr('lang', lang);
             storeLocalConfig();
         }
 
