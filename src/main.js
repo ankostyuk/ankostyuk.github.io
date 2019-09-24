@@ -137,9 +137,7 @@
         }
 
         function initTools() {
-            $app.find('[ap-tools-print]').click(function(){
-                _window.print();
-            });
+          // NOOP
         }
 
         //
