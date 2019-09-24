@@ -11,9 +11,6 @@ ul.ap-list-item-spacing > li {
 }
 
 .ap-mark-as-item:before {
-    /*content: "• ";*/
-    /*content: "· ";*/
-    /*font-weight: bold;*/
     content: "✳ ";
     font-size: 85%;
 }
@@ -137,6 +134,7 @@ html[lang="en"] .ap-lang-switcher__link_en {
     color: #fff !important;
     background-color: #fff;
     text-decoration: none !important;
+    page-break-inside: avoid;
 }
 .ap-project-preview:hover {
     z-index: 10;
@@ -189,86 +187,31 @@ html[lang="en"] .ap-lang-switcher__link_en {
 
 /* Bootstrap print fix */
 @media print {
-  /**,
-  *:before,
-  *:after {
-    color: #000 !important;
-    text-shadow: none !important;
-    background: transparent !important;
-    -webkit-box-shadow: none !important;
-            box-shadow: none !important;
-  }*/
   a,
   a:visited {
-    /*text-decoration: underline;*/
     text-decoration: none !important;
     color: #23527c !important;
   }
   a[href]:after {
-    /*content: " (" attr(href) ")";*/
     content: "" !important;
   }
   abbr[title]:after {
-    /*content: " (" attr(title) ")";*/
     content: "" !important;
   }
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: "" !important;
   }
-  /*pre,
-  blockquote {
-    border: 1px solid #999;
-
-    page-break-inside: avoid;
-  }
-  thead {
-    display: table-header-group;
-  }
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-  img {
-    max-width: 100% !important;
-  }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-  .navbar {
-    display: none;
-  }
-  .btn > .caret,
-  .dropup > .btn > .caret {
-    border-top-color: #000 !important;
-  }
-  .label {
-    border: 1px solid #000;
-  }
-  .table {
-    border-collapse: collapse !important;
-  }
-  .table td,
-  .table th {
-    background-color: #fff !important;
-  }
-  .table-bordered th,
-  .table-bordered td {
-    border: 1px solid #ddd !important;
-  }*/
 }
 
 /* print */
 @media print {
     .ankostyuk-page {
         margin: 0 !important;
+    }
+
+    a {
+      white-space: nowrap !important;
     }
 
     .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
