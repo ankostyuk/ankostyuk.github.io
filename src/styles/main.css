@@ -253,4 +253,8 @@ html[lang="en"] .ap-lang-switcher__link_en {
     .col-sm-1 {
         width: 8.33333333% !important;
     }
+
+    .page-break-before {
+        page-break-before: always;
+    }
 }
